@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="style of wallet/style.css">
+</head>
+<body>
+    <header>
+        <h1>Personal Finance Tracker</h1>
+    </header>
+
+    <main>
+        <section class="principal-balance-section">
+            <h2>Current Balance: <span id="currentBalance">$0.00</span></h2>
+            <div class="balance-input">
+                <input type="number" id="principalAmountInput" placeholder="Set your principal amount">
+                <button id="setPrincipalAmountBtn">Set Principal</button>
+            </div>
+        </section>
+
+        <section class="monthly-summary-section">
+            <h2>Monthly Overview</h2>
+            <div class="month-year-selector">
+                <label for="monthSelect">Month:</label>
+                <select id="monthSelect"></select>
+                <label for="yearSelect">Year:</label>
+                <select id="yearSelect"></select>
+            </div>
+            <div class="monthly-overview">
+                <p>Total Income: <span id="monthlyIncomeSummary">$0.00</span></p>
+                <p>Total Expense: <span id="monthlyExpenseSummary">$0.00</span></p>
+                <p>Net Monthly: <span id="monthlyNetSummary">$0.00</span></p>
+            </div>
+        </section>
+
+        <section class="transactions-container">
+            <div class="income-section">
+                <h2>Income</h2>
+                <div class="add-transaction">
+                    <input type="text" id="incomeDescription" placeholder="Description">
+                    <input type="number" id="incomeAmount" placeholder="Amount">
+                    <button id="addIncomeBtn">Add Income</button>
+                </div>
+                <ul id="incomeList">
+                    </ul>
+            </div>
+
+            <div class="expense-section">
+                <h2>Expenses</h2>
+                <div class="add-transaction">
+                    <input type="text" id="expenseDescription" placeholder="Description">
+                    <input type="number" id="expenseAmount" placeholder="Amount">
+                    <button id="addExpenseBtn">Add Expense</button>
+                </div>
+                <ul id="expenseList">
+                    </ul>
+            </div>
+        </section>
+
+        <section class="savings-section">
+            <h2>Yearly Savings</h2>
+            <p>Savings Goal: <span id="savingsGoal">$0.00</span></p>
+            <p>Current Savings: <span id="currentSavings">$0.00</span></p>
+            <div class="savings-input">
+                <input type="number" id="depositAmount" placeholder="Deposit amount">
+                <button id="depositBtn">Deposit to Savings</button>
+                <input type="number" id="setSavingsGoal" placeholder="Set Yearly Goal">
+                <button id="setGoalBtn">Set Goal</button>
+            </div>
+        </section>
+
+        <section class="student-payments-section">
+            <h2>Student Payments Tracker</h2>
+
+            <div class="add-new-student">
+                <label for="newStudentNameInput">Student Name:</label>
+                <input type="text" id="newStudentNameInput" placeholder="New student name">
+                <label for="newStudentAmountInput">Amount:</label>
+                <input type="number" id="newStudentAmountInput" placeholder="Expected amount">
+                <button id="addStudentBtn">Add Student</button>
+            </div>
+
+            <div class="student-selection">
+                <label for="studentNameSelect">Select Student:</label>
+                <select id="studentNameSelect">
+                    <option value="">-- Select a Student --</option>
+                </select>
+            </div>
+
+            <div class="student-month-year-selector">
+                <label for="studentMonthSelect">Month:</label>
+                <select id="studentMonthSelect"></select>
+                <label for="studentYearSelect">Year:</label>
+                <select id="studentYearSelect"></select>
+            </div>
+
+            <div class="payment-overview">
+                <h3>Payment Status for <span id="selectedStudentDisplayName">-- Select Student --</span></h3>
+                <p>Expected Payment: <span id="expectedPaymentAmount">$0.00</span></p>
+                <label for="paymentStatusCheckbox">Payment Done:</label>
+                <input type="checkbox" id="paymentStatusCheckbox">
+                <button id="savePaymentStatusBtn">Save Status</button>
+            </div>
+
+            <h4>Payment History:</h4>
+            <ul id="studentPaymentHistoryList">
+                </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Personal Finance Tracker</p>
+    </footer>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>

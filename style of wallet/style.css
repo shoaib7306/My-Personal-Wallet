@@ -1,0 +1,274 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4CAF50; /* The nice green background */
+    color: white; /* Default text color for elements inside header */
+    padding: 15px 0; /* Padding top/bottom */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Space below the header */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+header h1 {
+    margin: 0; /* Remove default margin from h1 */
+    font-size: 2.5em; /* Ensure a readable font size */
+    color: white; /* Explicitly set the h1 text color to white */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle text shadow for visual pop */
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Changed to apply to all h2 elements */
+h2 {
+    color: #4CAF50; /* Changed to green */
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Make sure your footer also has a distinct color for text if needed */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #eee;
+    border-radius: 8px;
+    color: #555; /* Ensure footer text is visible */
+}
+
+/* Add or ensure these general input/button styles are present */
+input[type="text"],
+input[type="number"],
+select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    flex-grow: 1; /* Allow inputs to take available space */
+    min-width: 150px; /* Ensure they don't get too small */
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+li {
+    background-color: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+}
+
+li span:first-child {
+    font-weight: bold;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+
+/* Specific section layouts */
+.principal-balance-section .balance-input,
+.monthly-summary-section .month-year-selector,
+.savings-section .savings-input {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 10px; /* Space between items */
+    align-items: center;
+    margin-top: 15px;
+}
+
+.monthly-overview p {
+    margin: 5px 0;
+}
+
+.monthly-overview span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.transactions-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.income-section,
+.expense-section {
+    flex: 1; /* Allow sections to grow and shrink */
+    min-width: 45%; /* Ensure minimum width before wrapping */
+}
+
+.add-transaction {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+/* Student Payments Section Styles */
+.student-payments-section {
+    background-color: #e6f7ff; /* A light blue to distinguish it */
+    border-color: #91d5ff;
+}
+
+.add-new-student,
+.student-selection,
+.student-month-year-selector, /* NEW: Style for the new month/year selector div */
+.payment-overview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px dashed #c9e3f0;
+    border-radius: 5px;
+    background-color: #f0f8ff;
+}
+
+.add-new-student label,
+.student-selection label,
+.student-month-year-selector label, /* NEW: Style for labels in the new div */
+.payment-overview label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Ensure inputs and buttons grow correctly in these new divs */
+.add-new-student input,
+.student-selection select,
+.student-month-year-selector select { /* NEW: Style for select in the new div */
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.add-new-student button,
+.student-selection button,
+.student-month-year-selector button { /* If you add a button here */
+    margin-bottom: 10px;
+}
+
+.payment-overview input[type="checkbox"] {
+    width: auto; /* Override full width for checkbox */
+    margin-bottom: 0;
+    margin-right: 10px;
+    transform: scale(1.5); /* Make checkbox larger */
+}
+
+#studentPaymentHistoryList li {
+    background-color: #f3fbff;
+    border-color: #e0f2ff;
+    padding: 8px 12px;
+}
+
+/* Optional: Payment status colors for history list */
+.payment-done {
+    color: #28a745; /* Green */
+    font-weight: bold;
+}
+
+.payment-pending {
+    color: #dc3545; /* Red */
+    font-weight: bold;
+}
+
+/* Responsiveness adjustments on small screens */
+@media (max-width: 768px) {
+    .transactions-container {
+        flex-direction: column;
+    }
+
+    .income-section,
+    .expense-section {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .principal-balance-section .balance-input,
+    .monthly-summary-section .month-year-selector,
+    .savings-section .savings-input,
+    .add-transaction {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    button {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* NEW RULES for student section responsiveness */
+    .add-new-student,
+    .student-selection,
+    .student-month-year-selector,
+    .payment-overview {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .add-new-student input,
+    .add-new-student button,
+    .student-selection select,
+    .student-month-year-selector select,
+    .payment-overview button {
+        width: 100%;
+        margin-right: 0;
+    }
+}
